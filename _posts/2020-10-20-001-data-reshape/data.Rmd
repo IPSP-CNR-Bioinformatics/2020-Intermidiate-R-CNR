@@ -20,14 +20,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Ingredients
 
-1. What are tidy data?
+1. Tidy data
 
-1. Recap on dplyr (select, mutate, filter, group_by and summarise)
+1. select, mutate, filter, group_by and summarise (dplyr package)
 
-1. New functions: pivot_longer and pivot_wider
+1. pivot_longer and pivot_wider (tidyr package)
 
+```{r share-again, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "../../Pres/day-1-tidy.html", ratio = "16:9")
+```
 
 ## Coocked product
 
+### Preparare esempio con RT-PCR => far vedere tabela con gt
 
-## Recepyx
+- Leggere file
+
+- Modificare colonne
+
+- Mettere Primers su colonne (pivot_wider)
+
+## Recepy
+
+### Qui discutiamo la soluzione

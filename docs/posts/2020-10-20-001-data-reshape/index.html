@@ -50,7 +50,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["data_files/bowser-1.9.3/bowser.min.js","data_files/distill-2.2.21/template.v2.js","data_files/header-attrs-2.4/header-attrs.js","data_files/jquery-1.11.3/jquery.min.js","data_files/webcomponents-2.0.0/webcomponents.js","images/dr.png"]}
+  {"type":"character","attributes":{},"value":["data_files/bowser-1.9.3/bowser.min.js","data_files/clipboard-2.0.6/clipboard.min.js","data_files/distill-2.2.21/template.v2.js","data_files/fitvids-2.1.1/fitvids.min.js","data_files/header-attrs-2.4/header-attrs.js","data_files/jquery-1.11.3/jquery.min.js","data_files/shareon-1.4.1/shareon.min.css","data_files/shareon-1.4.1/shareon.min.js","data_files/webcomponents-2.0.0/webcomponents.js","data_files/xaringanExtra-shareagain-0.2.3.9000/shareagain.css","data_files/xaringanExtra-shareagain-0.2.3.9000/shareagain.js","images/dr.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1276,6 +1276,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!--/radix_placeholder_distill-->
   <script src="../../site_libs/header-attrs-2.4/header-attrs.js"></script>
+  <script src="../../site_libs/fitvids-2.1.1/fitvids.min.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -1341,15 +1342,27 @@ Days
 </div>
 
 <div class="d-article">
-<h2 id="apetizer">Apetizer</h2>
+<h2 id="ingredients">Ingredients</h2>
 <ol type="1">
-<li><p>What are tidy data?</p></li>
-<li><p>Recap on dplyr (select, mutate, filter, group_by and summarise)</p></li>
-<li><p>New functions: pivot_longer and pivot_wider</p></li>
+<li><p>Tidy data</p></li>
+<li><p>select, mutate, filter, group_by and summarise (dplyr package)</p></li>
+<li><p>pivot_longer and pivot_wider (tidyr package)</p></li>
 </ol>
-<h2 id="the-problem">The problem</h2>
-<h2 id="the-expected-result">The expected result</h2>
-<h2 id="how-to">How to</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="shareagain" style="min-width:300px;margin:1em auto;">
+<iframe src="../../Pres/day-1-tidy.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</div>
+<h2 id="coocked-product">Coocked product</h2>
+<h3 id="preparare-esempio-con-rt-pcr-far-vedere-tabela-con-gt">Preparare esempio con RT-PCR =&gt; far vedere tabela con gt</h3>
+<ul>
+<li><p>Leggere file</p></li>
+<li><p>Modificare colonne</p></li>
+<li><p>Mettere Primers su colonne (pivot_wider)</p></li>
+</ul>
+<h2 id="recepy">Recepy</h2>
+<h3 id="qui-discutiamo-la-soluzione">Qui discutiamo la soluzione</h3>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
