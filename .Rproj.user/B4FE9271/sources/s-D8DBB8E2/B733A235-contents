@@ -1,0 +1,24 @@
+---
+title: "Rmarkdown"
+description: |
+  Use R Markdown to share your research! It supports dozens of static and dynamic output formats including HTML, PDF, MS Word, Beamer, HTML5 slides, Tufte-style handouts, books, dashboards, shiny applications, scientific articles, websites, and more. 
+preview: images/001.png
+categories:
+  - data
+author:
+  - name: Marco Chiapello 
+    affiliation: Institute of Plant Protection - CNR
+date: 11-20-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+

@@ -1,0 +1,25 @@
+---
+title: "purrr package - map functions"
+description: |
+  purrr enhances R’s functional programming (FP) toolkit by providing a complete and consistent set of tools for working with functions and vectors
+preview: images/001.png
+categories:
+  - map
+  - vectorization
+author:
+  - name: Marco Chiapello 
+    affiliation: Institute of Plant Protection - CNR
+date: 11-19-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+

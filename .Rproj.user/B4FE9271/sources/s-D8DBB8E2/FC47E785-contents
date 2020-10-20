@@ -1,0 +1,25 @@
+---
+title: "Functions"
+description: |
+  This lesson will be about writing a function.
+preview: images/001.png
+categories:
+  - function
+  - programming
+author:
+  - name: Marco Chiapello 
+    affiliation: Institute of Plant Protection - CNR
+date: 11-19-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+

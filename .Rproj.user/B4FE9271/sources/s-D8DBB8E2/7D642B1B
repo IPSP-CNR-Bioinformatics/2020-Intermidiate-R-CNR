@@ -3,7 +3,7 @@
     "path": "~/Documents/Courses/2020-Intermidiate-R-CNR/_site.yml",
     "project_path": "_site.yml",
     "type": "yaml",
-    "hash": "4273113109",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1603190561359.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "16,8",
+        "cursorPosition": "26,10",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1603190567,
+    "lastKnownWriteTime": 1603196229,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1603190567283,
+    "last_content_update": 1603196229057,
     "read_only": false,
     "read_only_alternatives": []
 }
