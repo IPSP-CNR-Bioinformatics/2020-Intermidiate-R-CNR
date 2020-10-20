@@ -1,0 +1,26 @@
+name: "2020-Intermidiate-R-CNR"
+title: "R intermediate course"
+description: |
+  R intermediate course
+collections:
+  posts:
+    categories: true
+    categories_metadata: true
+    authors_metadata: true
+    custom: _custom.html
+output_dir: "docs"
+navbar:
+  logo:
+    image: images/Rlogo.png
+    href: https://www.viroplant.eu/
+  search: true
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Contacts"
+      href: contacts.html
+    - text: "Day 1"
+      href: day1.html
+    - icon: fab fa-github
+      href: https://github.com/mchiapello/202010_VirusDetection
+output: distill::distill_article
