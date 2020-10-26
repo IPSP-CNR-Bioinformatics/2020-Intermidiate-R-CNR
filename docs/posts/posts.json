@@ -55,24 +55,6 @@
     "input_file": {}
   },
   {
-    "path": "posts/2020-10-20-001-data-reshape/",
-    "title": "Data reshaping",
-    "description": "This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: “wide” and “long”.",
-    "author": [
-      {
-        "name": "Marco Chiapello",
-        "url": {}
-      }
-    ],
-    "date": "2020-11-19",
-    "categories": [
-      "data"
-    ],
-    "preview": "posts/2020-10-20-001-data-reshape/images/dr.png",
-    "last_modified": "2020-10-20T18:16:22+02:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2020-10-20-002-data-join/",
     "title": "Data join",
     "description": "This lesson will be about data join We will combine different tables together.",
@@ -126,25 +108,6 @@
     ],
     "preview": "posts/2020-10-20-004-loops/images/001.png",
     "last_modified": "2020-10-20T14:57:37+02:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2020-10-20-005-purr/",
-    "title": "purrr package - map functions",
-    "description": "purrr enhances R’s functional programming (FP) toolkit by providing a complete and consistent set of tools for working with functions and vectors",
-    "author": [
-      {
-        "name": "Marco Chiapello",
-        "url": {}
-      }
-    ],
-    "date": "2020-11-19",
-    "categories": [
-      "map",
-      "vectorization"
-    ],
-    "preview": "posts/2020-10-20-005-purr/images/001.png",
-    "last_modified": "2020-10-20T14:58:06+02:00",
     "input_file": {}
   }
 ]

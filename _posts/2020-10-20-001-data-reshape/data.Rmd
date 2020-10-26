@@ -18,18 +18,6 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Ingredients
-
-1. Tidy data
-
-1. select, mutate, filter, group_by and summarise (dplyr package)
-
-1. pivot_longer and pivot_wider (tidyr package)
-
-```{r share-again, echo=FALSE}
-xaringanExtra::embed_xaringan(url = "../../Pres/day-1-tidy.html", ratio = "16:9")
-```
-
 ## Coocked product
 
 ### Preparare esempio con RT-PCR => far vedere tabela con gt
@@ -39,6 +27,19 @@ xaringanExtra::embed_xaringan(url = "../../Pres/day-1-tidy.html", ratio = "16:9"
 - Modificare colonne
 
 - Mettere Primers su colonne (pivot_wider)
+
+## Ingredients
+
+1. Tidy data
+
+1. select, mutate, filter, group_by and summarise (dplyr package)
+
+1. pivot_longer and pivot_wider (tidyr package)
+
+```{r share-again, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "Pres/day-1-tidy.html", ratio = "16:9")
+```
+
 
 ## Recepy
 
