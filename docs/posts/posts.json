@@ -127,5 +127,24 @@
     "preview": "posts/2020-10-20-004-loops/images/001.png",
     "last_modified": "2020-10-20T14:57:37+02:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2020-10-20-005-purr/",
+    "title": "purrr package - map functions",
+    "description": "purrr enhances R functional programming (FP) toolkit by providing a complete and consistent set of tools for working with functions and vectors",
+    "author": [
+      {
+        "name": "Marco Chiapello",
+        "url": {}
+      }
+    ],
+    "date": "2020-11-19",
+    "categories": [
+      "loops",
+      "programming"
+    ],
+    "preview": "posts/2020-10-20-005-purr/images/001.png",
+    "last_modified": "2020-10-27T10:00:30+01:00",
+    "input_file": {}
   }
 ]
