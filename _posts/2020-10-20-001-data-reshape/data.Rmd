@@ -37,7 +37,7 @@ knitr::opts_chunk$set(echo = FALSE)
 1. pivot longer and pivot wider (tidyr package)
 
 ```{r share-again, echo=FALSE}
-xaringanExtra::embed_xaringan(url = "Pres/day-1-tidy.html", ratio = "16:9")
+xaringanExtra::embed_xaringan(url = "../../Pres/day-1-tidy.html", ratio = "16:9")
 ```
 
 
