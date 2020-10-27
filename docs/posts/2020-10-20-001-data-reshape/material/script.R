@@ -8,7 +8,7 @@ library(tidyverse)
 library(gt)
 
 # READ DATA IN
-raw  <- read_csv("raw.csv") %>%
+raw  <- read_csv("material/raw.csv") %>%
             select(Sample, Cq) %>%
             mutate(Cq = str_replace(.$Cq, ",", ".") %>% as.numeric(),
                    Sample = str_c("T", Sample)) %>%
@@ -33,7 +33,7 @@ df2 <- df %>%
     select(-order) %>%
     ungroup
 
-df2 %>%
+tab <- df2 %>%
     mutate(pippo = rowSums(select(., -Sample))) %>%
     gt() %>%
     tab_header(title = "Virus detection in qRT-PCR") %>%
@@ -61,3 +61,5 @@ df2 %>%
     cols_hide(
               columns = vars(pippo)
     )
+
+tab

@@ -57,7 +57,7 @@
   {
     "path": "posts/2020-10-20-001-data-reshape/",
     "title": "Data reshaping",
-    "description": "This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_.",
+    "description": "This lesson will be about data reshaping and data presentation in tables. We will read data, transform and finally present them in customable tables.",
     "author": [
       {
         "name": "Marco Chiapello",
@@ -69,7 +69,7 @@
       "data"
     ],
     "preview": "posts/2020-10-20-001-data-reshape/images/dr.png",
-    "last_modified": "2020-10-27T10:08:45+01:00",
+    "last_modified": "2020-10-27T10:27:49+01:00",
     "input_file": {}
   },
   {

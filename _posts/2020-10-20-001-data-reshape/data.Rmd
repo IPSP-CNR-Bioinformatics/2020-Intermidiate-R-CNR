@@ -1,7 +1,7 @@
 ---
 title: "Data reshaping"
 description: |
-  This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_.
+  This lesson will be about data reshaping and data presentation in tables. We will read data, transform and finally present them in customable tables.
 preview: images/dr.png
 categories:
   - data
@@ -12,21 +12,83 @@ date: 11-19-2020
 output:
   distill::distill_article:
     self_contained: false
+    code_folding: hide
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Coocked product
+## Cooked product
 
-### Preparare esempio con RT-PCR => far vedere tabela con gt
+```{r echo=FALSE}
+################################################################################
+# Scritp for R intermidiate course
+# Data reshaping lesson
+################################################################################
 
-- Leggere file
+# LOAD LIBRARIES
+library(tidyverse)
+library(gt)
 
-- Modificare colonne
+# READ DATA IN
+raw  <- read_csv("material/raw.csv") %>%
+            select(Sample, Cq) %>%
+            mutate(Cq = str_replace(.$Cq, ",", ".") %>% as.numeric(),
+                   Sample = str_c("T", Sample)) %>%
+            separate(Sample, sep = "-", extra = "merge", c("Sample", "Primer")) 
 
-- Mettere Primers su colonne
+
+df <- raw %>%
+    group_by(Sample, Primer) %>%
+    summarise_at(vars(Cq), list(Max = max, Min = min), na.rm = FALSE) %>%
+    mutate(Exp = case_when(
+                          Max < 30 & Min < 30 ~ 1,
+                          TRUE ~ 0),
+           Max = replace(Max, is.infinite(Max), 40),
+           Min = replace(Min, is.infinite(Min), 40))
+
+df2 <- df %>%
+    pivot_wider(id_cols = -(Max:Min),
+                names_from = Primer,
+                values_from = Exp) %>%
+    mutate(order = as.numeric(str_remove(Sample, "T"))) %>%
+    arrange(order) %>%
+    select(-order) %>%
+    ungroup
+
+tab <- df2 %>%
+    mutate(pippo = rowSums(select(., -Sample))) %>%
+    gt() %>%
+    tab_header(title = "Virus detection in qRT-PCR") %>%
+    tab_spanner(
+    label = "Primers",
+    columns = vars(`T41-5`, `T41-6`, `T41-7`, `T41-8`)
+    ) %>%
+    tab_options(
+    column_labels.font.size = "smaller",
+    table.font.size = "smaller",
+    data_row.padding = px(3)
+    ) %>%
+    tab_footnote(
+    footnote = "Not present in any sample",
+    locations = cells_column_labels(columns = vars(`T41-6`))
+    ) %>%
+    opt_footnote_marks(marks = "letters") %>%
+    tab_style(
+    style = list(
+      cell_fill(color = "#F9E3D6")
+      ),
+    locations = cells_body(
+      rows = pippo > 0)
+    ) %>% 
+    cols_hide(
+              columns = vars(pippo)
+    )
+
+tab
+
+```
 
 ## Ingredients
 
@@ -36,12 +98,78 @@ knitr::opts_chunk$set(echo = FALSE)
 
 1. pivot longer and pivot wider (tidyr package)
 
+1. gt package
+
 ```{r share-again, echo=FALSE}
 xaringanExtra::embed_xaringan(url = "../../Pres/day-1-tidy.html", ratio = "16:9")
 ```
 
 
-## Recepy
+## Recipe
 
-### Qui discutiamo la soluzione
+```{r echo=TRUE}
+################################################################################
+# Scritp for R intermidiate course
+# Data reshaping lesson
+################################################################################
+
+# LOAD LIBRARIES
+library(tidyverse)
+library(gt)
+
+# READ DATA IN
+raw  <- read_csv("material/raw.csv") %>%
+            select(Sample, Cq) %>%
+            mutate(Cq = str_replace(.$Cq, ",", ".") %>% as.numeric(),
+                   Sample = str_c("T", Sample)) %>%
+            separate(Sample, sep = "-", extra = "merge", c("Sample", "Primer")) 
+
+
+df <- raw %>%
+    group_by(Sample, Primer) %>%
+    summarise_at(vars(Cq), list(Max = max, Min = min), na.rm = FALSE) %>%
+    mutate(Exp = case_when(
+                          Max < 30 & Min < 30 ~ 1,
+                          TRUE ~ 0),
+           Max = replace(Max, is.infinite(Max), 40),
+           Min = replace(Min, is.infinite(Min), 40))
+
+df2 <- df %>%
+    pivot_wider(id_cols = -(Max:Min),
+                names_from = Primer,
+                values_from = Exp) %>%
+    mutate(order = as.numeric(str_remove(Sample, "T"))) %>%
+    arrange(order) %>%
+    select(-order) %>%
+    ungroup
+
+tab <- df2 %>%
+    mutate(pippo = rowSums(select(., -Sample))) %>%
+    gt() %>%
+    tab_header(title = "Virus detection in qRT-PCR") %>%
+    tab_spanner(
+    label = "Primers",
+    columns = vars(`T41-5`, `T41-6`, `T41-7`, `T41-8`)
+    ) %>%
+    tab_options(
+    column_labels.font.size = "smaller",
+    table.font.size = "smaller",
+    data_row.padding = px(3)
+    ) %>%
+    tab_footnote(
+    footnote = "Not present in any sample",
+    locations = cells_column_labels(columns = vars(`T41-6`))
+    ) %>%
+    opt_footnote_marks(marks = "letters") %>%
+    tab_style(
+    style = list(
+      cell_fill(color = "#F9E3D6")
+      ),
+    locations = cells_body(
+      rows = pippo > 0)
+    ) %>% 
+    cols_hide(
+              columns = vars(pippo)
+    )
+```
 

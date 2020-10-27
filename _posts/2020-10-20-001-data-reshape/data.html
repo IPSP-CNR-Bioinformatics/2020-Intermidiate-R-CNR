@@ -21,7 +21,7 @@
   <!--radix_placeholder_meta_tags-->
   <title>Data reshaping</title>
 
-  <meta property="description" itemprop="description" content="This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_."/>
+  <meta property="description" itemprop="description" content="This lesson will be about data reshaping and data presentation in tables. We will read data, transform and finally present them in customable tables."/>
 
 
   <!--  https://schema.org/Article -->
@@ -32,19 +32,19 @@
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Data reshaping"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_."/>
+  <meta property="og:description" content="This lesson will be about data reshaping and data presentation in tables. We will read data, transform and finally present them in customable tables."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Data reshaping"/>
-  <meta property="twitter:description" content="This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_."/>
+  <meta property="twitter:description" content="This lesson will be about data reshaping and data presentation in tables. We will read data, transform and finally present them in customable tables."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","categories","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Data reshaping"]},{"type":"character","attributes":{},"value":["This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_.\n"]},{"type":"character","attributes":{},"value":["images/dr.png"]},{"type":"character","attributes":{},"value":["data"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Marco Chiapello"]},{"type":"character","attributes":{},"value":["Institute of Plant Protection - CNR"]}]}]},{"type":"character","attributes":{},"value":["11-19-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","categories","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Data reshaping"]},{"type":"character","attributes":{},"value":["This lesson will be about data reshaping and data presentation in tables. We will read data, transform and finally present them in customable tables.\n"]},{"type":"character","attributes":{},"value":["images/dr.png"]},{"type":"character","attributes":{},"value":["data"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Marco Chiapello"]},{"type":"character","attributes":{},"value":["Institute of Plant Protection - CNR"]}]}]},{"type":"character","attributes":{},"value":["11-19-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["hide"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -954,7 +954,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Data reshaping","description":"This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_.","authors":[{"author":"Marco Chiapello","authorURL":"#","affiliation":"Institute of Plant Protection - CNR","affiliationURL":"#"}],"publishedDate":"2020-11-19T00:00:00.000+01:00","citationText":"Chiapello, 2020"}
+{"title":"Data reshaping","description":"This lesson will be about data reshaping and data presentation in tables. We will read data, transform and finally present them in customable tables.","authors":[{"author":"Marco Chiapello","authorURL":"#","affiliation":"Institute of Plant Protection - CNR","affiliationURL":"#"}],"publishedDate":"2020-11-19T00:00:00.000+01:00","citationText":"Chiapello, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -965,7 +965,7 @@
 
 <div class="d-title">
 <h1>Data reshaping</h1>
-<p><p>This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: <em>wide</em> and <em>long</em>.</p></p>
+<p><p>This lesson will be about data reshaping and data presentation in tables. We will read data, transform and finally present them in customable tables.</p></p>
 </div>
 
 <div class="d-byline">
@@ -975,18 +975,476 @@
 </div>
 
 <div class="d-article">
-<h2 id="coocked-product">Coocked product</h2>
-<h3 id="preparare-esempio-con-rt-pcr-far-vedere-tabela-con-gt">Preparare esempio con RT-PCR =&gt; far vedere tabela con gt</h3>
-<ul>
-<li><p>Leggere file</p></li>
-<li><p>Modificare colonne</p></li>
-<li><p>Mettere Primers su colonne</p></li>
-</ul>
+<h2 id="cooked-product">Cooked product</h2>
+<div class="layout-chunk" data-layout="l-body">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#ybkqntnbvk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: smaller;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ybkqntnbvk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ybkqntnbvk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: smaller;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ybkqntnbvk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: smaller;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ybkqntnbvk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ybkqntnbvk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ybkqntnbvk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ybkqntnbvk .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ybkqntnbvk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ybkqntnbvk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ybkqntnbvk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ybkqntnbvk .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ybkqntnbvk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#ybkqntnbvk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ybkqntnbvk .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ybkqntnbvk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ybkqntnbvk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#ybkqntnbvk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ybkqntnbvk .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#ybkqntnbvk .gt_left {
+  text-align: left;
+}
+
+#ybkqntnbvk .gt_center {
+  text-align: center;
+}
+
+#ybkqntnbvk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ybkqntnbvk .gt_font_normal {
+  font-weight: normal;
+}
+
+#ybkqntnbvk .gt_font_bold {
+  font-weight: bold;
+}
+
+#ybkqntnbvk .gt_font_italic {
+  font-style: italic;
+}
+
+#ybkqntnbvk .gt_super {
+  font-size: 65%;
+}
+
+#ybkqntnbvk .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="ybkqntnbvk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="5" class="gt_heading gt_title gt_font_normal" style>Virus detection in qRT-PCR</th>
+    </tr>
+    <tr>
+      <th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style></th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_center gt_columns_bottom_border" rowspan="2" colspan="1">Sample</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4">
+        <span class="gt_column_spanner">Primers</span>
+      </th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">T41-5</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">T41-6<sup class="gt_footnote_marks">a</sup></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">T41-7</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">T41-8</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left">T1</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">T2</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">T3</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">T4</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left" style="background-color: #F9E3D6;">T5</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">0</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">0</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">0</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">1</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">T6</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">T7</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">T8</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left" style="background-color: #F9E3D6;">T9</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">1</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">0</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">0</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">1</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left" style="background-color: #F9E3D6;">T10</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">0</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">0</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">1</td>
+      <td class="gt_row gt_right" style="background-color: #F9E3D6;">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">T11</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">T12</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_right">0</td>
+    </tr>
+  </tbody>
+  
+  <tfoot>
+    <tr class="gt_footnotes">
+      <td colspan="5">
+        <p class="gt_footnote">
+          <sup class="gt_footnote_marks">
+            <em>a</em>
+          </sup>
+           
+          Not present in any sample
+          <br />
+        </p>
+      </td>
+    </tr>
+  </tfoot>
+</table></div>
+</div>
 <h2 id="ingredients">Ingredients</h2>
 <ol type="1">
 <li><p>Tidy data</p></li>
 <li><p>select, mutate, filter, group by and summarise (dplyr package)</p></li>
 <li><p>pivot longer and pivot wider (tidyr package)</p></li>
+<li><p>gt package</p></li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
@@ -994,8 +1452,73 @@
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 </div>
-<h2 id="recepy">Recepy</h2>
-<h3 id="qui-discutiamo-la-soluzione">Qui discutiamo la soluzione</h3>
+<h2 id="recipe">Recipe</h2>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+################################################################################
+# Scritp for R intermidiate course
+# Data reshaping lesson
+################################################################################
+
+# LOAD LIBRARIES
+library(tidyverse)
+library(gt)
+
+# READ DATA IN
+raw  &lt;- read_csv(&quot;material/raw.csv&quot;) %&gt;%
+            select(Sample, Cq) %&gt;%
+            mutate(Cq = str_replace(.$Cq, &quot;,&quot;, &quot;.&quot;) %&gt;% as.numeric(),
+                   Sample = str_c(&quot;T&quot;, Sample)) %&gt;%
+            separate(Sample, sep = &quot;-&quot;, extra = &quot;merge&quot;, c(&quot;Sample&quot;, &quot;Primer&quot;)) 
+
+
+df &lt;- raw %&gt;%
+    group_by(Sample, Primer) %&gt;%
+    summarise_at(vars(Cq), list(Max = max, Min = min), na.rm = FALSE) %&gt;%
+    mutate(Exp = case_when(
+                          Max &lt; 30 &amp; Min &lt; 30 ~ 1,
+                          TRUE ~ 0),
+           Max = replace(Max, is.infinite(Max), 40),
+           Min = replace(Min, is.infinite(Min), 40))
+
+df2 &lt;- df %&gt;%
+    pivot_wider(id_cols = -(Max:Min),
+                names_from = Primer,
+                values_from = Exp) %&gt;%
+    mutate(order = as.numeric(str_remove(Sample, &quot;T&quot;))) %&gt;%
+    arrange(order) %&gt;%
+    select(-order) %&gt;%
+    ungroup
+
+tab &lt;- df2 %&gt;%
+    mutate(pippo = rowSums(select(., -Sample))) %&gt;%
+    gt() %&gt;%
+    tab_header(title = &quot;Virus detection in qRT-PCR&quot;) %&gt;%
+    tab_spanner(
+    label = &quot;Primers&quot;,
+    columns = vars(`T41-5`, `T41-6`, `T41-7`, `T41-8`)
+    ) %&gt;%
+    tab_options(
+    column_labels.font.size = &quot;smaller&quot;,
+    table.font.size = &quot;smaller&quot;,
+    data_row.padding = px(3)
+    ) %&gt;%
+    tab_footnote(
+    footnote = &quot;Not present in any sample&quot;,
+    locations = cells_column_labels(columns = vars(`T41-6`))
+    ) %&gt;%
+    opt_footnote_marks(marks = &quot;letters&quot;) %&gt;%
+    tab_style(
+    style = list(
+      cell_fill(color = &quot;#F9E3D6&quot;)
+      ),
+    locations = cells_body(
+      rows = pippo &gt; 0)
+    ) %&gt;% 
+    cols_hide(
+              columns = vars(pippo)
+    )</code></pre>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
