@@ -55,6 +55,24 @@
     "input_file": {}
   },
   {
+    "path": "posts/2020-10-20-001-data-reshape/",
+    "title": "Data reshaping",
+    "description": "This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_.",
+    "author": [
+      {
+        "name": "Marco Chiapello",
+        "url": {}
+      }
+    ],
+    "date": "2020-11-19",
+    "categories": [
+      "data"
+    ],
+    "preview": "posts/2020-10-20-001-data-reshape/images/dr.png",
+    "last_modified": "2020-10-27T09:42:53+01:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2020-10-20-002-data-join/",
     "title": "Data join",
     "description": "This lesson will be about data join We will combine different tables together.",
@@ -69,7 +87,7 @@
       "data"
     ],
     "preview": "posts/2020-10-20-002-data-join/images/join.png",
-    "last_modified": "2020-10-20T12:30:45+02:00",
+    "last_modified": "2020-10-27T09:40:40+01:00",
     "input_file": {}
   },
   {

@@ -1,8 +1,8 @@
 ---
-title: "Reshape"
+title: "Data reshaping"
 description: |
-  This lesson will be about data join We will combine different tables together.
-preview: images/join.png
+  This lesson will be about data reshaping. We will transform different data formats researchers are often interested in: _wide_ and _long_.
+preview: images/dr.png
 categories:
   - data
 author:
@@ -18,7 +18,30 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+## Coocked product
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+### Preparare esempio con RT-PCR => far vedere tabela con gt
+
+- Leggere file
+
+- Modificare colonne
+
+- Mettere Primers su colonne
+
+## Ingredients
+
+1. Tidy data
+
+1. select, mutate, filter, group by and summarise (dplyr package)
+
+1. pivot longer and pivot wider (tidyr package)
+
+```{r share-again, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "Pres/day-1-tidy.html", ratio = "16:9")
+```
+
+
+## Recepy
+
+### Qui discutiamo la soluzione
 
